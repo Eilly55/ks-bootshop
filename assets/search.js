@@ -1,6 +1,6 @@
 /*
-  © 2024 KondaSoft
-  https://www.kondasoft.com
+  © 2024 Eilly55JJR
+  https://github.com/Eilly55.com
 */
 
 class PredictiveSearch extends HTMLElement {
