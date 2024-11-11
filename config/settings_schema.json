@@ -3,9 +3,9 @@
     "name": "theme_info",
     "theme_name": "ks_bootshop",
     "theme_version": "5.0.0",
-    "theme_author": "KondaSoft",
-    "theme_documentation_url": "https:\/\/www.kondasoft.com",
-    "theme_support_url": "https:\/\/community.kondasoft.com"
+    "theme_author": "Eilly55JJR",
+    "theme_documentation_url": "https:\/\/www.Eilly55JJR.com",
+    "theme_support_url": "https:\/\/community.Eilly55JJR.com"
   },
   {
     "name": "Colors",
@@ -43,7 +43,7 @@
         "type": "select",
         "id": "transparent_header",
         "label": "Transparent header",
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)",
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)",
         "options": [
           {
             "value": "header-transparent",
@@ -406,7 +406,7 @@
           }
         ],
         "default": "image",
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "select",
@@ -521,7 +521,7 @@
         "id": "product_card_custom_badge_metafield",
         "label": "Custom badge metafield",
         "default": "custom.badge",
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "select",
@@ -544,7 +544,7 @@
         "id": "product_card_show_wishlist",
         "label": "Show wishtlist button",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "select",
@@ -648,14 +648,14 @@
             "label": "Variant selector"
           }
         ],
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "text",
         "id": "product_card_color_swatches",
         "label": "Color swatches",
         "default": "Color, color",
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       }
     ]
   },
@@ -693,7 +693,7 @@
         "id": "cart_shipping_calculator",
         "label": "Show shipping calculator",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "header",
@@ -704,7 +704,7 @@
         "id": "cart_goal_enable",
         "label": "Enable cart goal",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "textarea",
@@ -849,7 +849,7 @@
         "id": "cart_upsells_enable",
         "label": "Enable upsells",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "text",
@@ -926,7 +926,7 @@
       {
         "type": "header",
         "content": "Gift upsell",
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
@@ -961,35 +961,35 @@
         "id": "search_query",
         "label": "Show suggestions",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
         "id": "search_collections",
         "label": "Search collections",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
         "id": "search_articles",
         "label": "Search blog articles",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
         "id": "search_pages",
         "label": "Search pages",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
         "id": "search_show_quick_view",
         "label": "Show \"Quick view\" button",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "select",
@@ -1054,14 +1054,14 @@
         "id": "wishlist",
         "label": "Enable wishlist",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       },
       {
         "type": "checkbox",
         "id": "recently_viewed",
         "label": "Enable recently-viewed",
         "default": true,
-        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.kondasoft.com\/collections\/shopify-themes)"
+        "info": "NOTE: This feature is supported only in our Premium Shopify Themes. [Browse premium themes](https:\/\/www.Eilly55JJR.com\/collections\/shopify-themes)"
       }
     ]
   },

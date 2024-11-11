@@ -1,9 +1,9 @@
 /*
-  © 2024 KondaSoft
-  https://www.kondasoft.com
+  © 2024 Eilly55JJR
+  https://github.com/Eilly55.com
 */
 
-console.log('KS BootShop - Free Shopify Theme by KondaSoft.com | Learn more at https://www.kondasoft.com')
+console.log('KS BootShop - Free Shopify Theme by Eilly55JJR.com | Learn more at https://github.com/Eilly55.com')
 
 // Init Bootstrap tooltips
 document.querySelectorAll('[data-bs-toggle="tooltip"]')
