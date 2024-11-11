@@ -1,63 +1,60 @@
-<div
-  id="newsletter-{{ section.id }}" 
-  class="
-    newsletter 
-    {{ section.settings.bg_color }} 
-    {{ section.settings.bg_gradient }}
-    {{ section.settings.text_color }}
-    {{ section.settings.border_top_width | prepend: 'border-top-' }}
-    {{ section.settings.border_bottom_width | prepend: 'border-bottom-' }}
-    {{ section.settings.border_color }} 
-    {{ section.settings.pt | prepend: 'pt-' }} 
-    {{ section.settings.pb | prepend: 'pb-' }}
-  "
-  style="
-    --bs-bg-opacity: {{ section.settings.bg_opacity | append: '%' }};
-    --bs-border-opacity: {{ section.settings.border_opacity | append: '%' }};
-  ">
-  <div 
-    class="container"
-    style="max-width: {{ section.settings.container_max_width }}px;">
-    {% render 'section-header' %}
+<!-- Sección de Suscripción al Boletín -->
+<div id="newsletter-{{ section.id }}" class="newsletter-section {{ section.settings.bg_color }} {{ section.settings.bg_gradient }} {{ section.settings.text_color }} {{ section.settings.border_top_width | prepend: 'border-top-' }} {{ section.settings.border_bottom_width | prepend: 'border-bottom-' }} {{ section.settings.border_color }} {{ section.settings.pt | prepend: 'pt-' }} {{ section.settings.pb | prepend: 'pb-' }}">
+  <div class="container" style="max-width: {{ section.settings.container_max_width }}px;">
+    <!-- Título y Descripción -->
+    <header>
+      <h2 class="newsletter-title">{{ section.settings.header_title | t }}</h2>
+      {% if section.settings.header_description != blank %}
+        <p class="newsletter-description">{{ section.settings.header_description | t }}</p>
+      {% endif %}
+    </header>
+
+    <!-- Formulario de Suscripción -->
     {% form 'customer', class: 'newsletter-form' %}
       <input type="hidden" name="contact[tags]" value="newsletter">
       {{ form.errors | default_errors }}
+      
       {% if form.posted_successfully? %}
-        <p class="alert alert-success">
+        <p class="alert alert-success" role="alert">
           {{ 'general.newsletter.confirmation_text' | t }}
         </p>
       {% endif %}
+      
       <div class="form-floating mt-n3">
         <div class="form-floating-icon">
           {% render 'svg-icons', icon: 'mail' %}
         </div>
+        
+        <!-- Campo de Correo Electrónico -->
         <input 
-          id="newsletter-input-email"
+          id="newsletter-input-email" 
           type="email" 
           name="contact[email]" 
-          size="30"
           class="form-control" 
           value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" 
-          placeholder="{{ 'general.newsletter.input_label' | t }}"
+          placeholder="{{ 'general.newsletter.input_label' | t }}" 
           autocorrect="off" 
-          autocapitalize="off">
-        <label for="newsletter-input-email">
-          {{ 'general.newsletter.input_label' | t }}
-        </label>
-        <button 
-          class="btn {{ section.settings.btn_color }} {{ section.settings.btn_size }}" 
-          type="submit" 
-          name="commit"
-          aria-label="{{ 'general.newsletter.submit_button' | t }}">
-          <svg width="22" height="22" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <path d="M28,61 C28,161.710136 28,212.065204 28,212.065204 C28,212.065204 351.044692,255.885938 351.044692,255.885938 C351.044692,255.885938 243.363128,270.4319 28,299.523824 L28,451 L483.555218,256 L28,61 Z" fill="currentColor"></path>
-            </g>
-          </svg>
-        </button>
+          autocapitalize="off" 
+          required
+          aria-label="Correo Electrónico de Suscripción">
+        
+        <label for="newsletter-input-email">{{ 'general.newsletter.input_label' | t }}</label>
       </div>
+
+      <!-- Botón de Envío -->
+      <button 
+        class="btn {{ section.settings.btn_color }} {{ section.settings.btn_size }}" 
+        type="submit" 
+        name="commit" 
+        aria-label="{{ 'general.newsletter.submit_button' | t }}">
+        <svg width="22" height="22" viewBox="0 0 512 512">
+          <path d="M28,61 C28,161.710136 28,212.065204 28,212.065204 C28,212.065204 351.044692,255.885938 351.044692,255.885938 C351.044692,255.885938 243.363128,270.4319 28,299.523824 L28,451 L483.555218,256 L28,61 Z" fill="currentColor"></path>
+        </svg>
+      </button>
+
+      <!-- Mensaje de Confirmación o Error -->
       {% unless section.settings.notice == blank %}
-        <div class="newsletter-notice rte mt-4 lh-sm small text-center opacity-70 fst-italic">
+        <div class="newsletter-notice text-center opacity-70 fst-italic">
           {{ section.settings.notice }}
         </div>
       {% endunless %}
@@ -65,6 +62,7 @@
   </div>
 </div>
 
+<!-- SEO: Meta etiquetas, esquema de Google para estructura de newsletter -->
 {% schema %}
 {
   "name": "Newsletter",
@@ -165,110 +163,6 @@
       "id": "container_max_width",
       "label": "Container max-width (px)",
       "info": "Leave empty to use the global container width"
-    },
-    {
-      "type": "header",
-      "content": "Header"
-    },
-
-    {
-      "type": "text",
-      "id": "header_title",
-      "label": "Title",
-      "default": "Newsletter Subscribe"
-    },
-    {
-      "type": "select",
-      "id": "header_title_font_size",
-      "label": "Title font-size",
-      "default": "h2",
-      "options": [
-        { "value": "h1", "label": "H1" },
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ]
-    },
-    {
-      "type": "richtext",
-      "id": "header_description",
-      "label": "Description (optional)",
-      "default": "<p>Add on optional description for this section</p>"
-    },
-    {
-      "type": "select",
-      "id": "header_description_font_size",
-      "label": "Description font-size",
-      "default": "fs-md",
-      "options": [
-        { "value": "fs-sm", "label": "sm" },
-        { "value": "fs-md", "label": "md" },
-        { "value": "fs-lg", "label": "lg" },
-        { "value": "fs-xl", "label": "xl" },
-        { "value": "fs-xxl", "label": "xxl" }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "Newsletter form"
-    },
-    {
-      "type": "select",
-      "id": "btn_color",
-      "label": "Button color",
-      "default": "btn-primary",
-      "options": [
-        { "group": "Solid", "value": "btn-primary", "label": "Primary" },
-        { "group": "Solid", "value": "btn-secondary", "label": "Secondary" },
-        { "group": "Solid", "value": "btn-white", "label": "White" },
-        { "group": "Light", "value": "btn-light-primary", "label": "Primary" },
-        { "group": "Light", "value": "btn-light-secondary", "label": "Secondary" },
-        { "group": "Light", "value": "btn-light-white", "label": "White" },
-        { "group": "Outline", "value": "btn-outline-primary", "label": "Primary" },
-        { "group": "Outline", "value": "btn-outline-secondary", "label": "Secondary" },
-        { "group": "Outline", "value": "btn-outline-white", "label": "White" }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "btn_size",
-      "label": "Button size",
-      "default": "",
-      "options": [
-        { "value": "btn-sm", "label": "Small" },
-        { "value": "", "label": "Medium" },
-        { "value": "btn-lg", "label": "Large" }
-      ]
-    },
-    {
-      "type": "richtext",
-      "id": "notice",
-      "label": "Notice text",
-      "default": "<p>By signing up for email, you agree to our <a href=\"/policies/terms-of-service\">Terms of Service</a> and <a href=\"/policies/privacy-policy\">Privacy Policy</a>.</p>"
-    },
-    {
-      "type": "header",
-      "content": "Spacing"
-    },
-    {
-      "type": "range",
-      "id": "pt",
-      "label": "Top",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "default": 10
-    },
-    {
-      "type": "range",
-      "id": "pb",
-      "label": "Bottom",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "default": 10
     }
   ],
   "presets": [
